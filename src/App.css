@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+:root{
+    --grey-color: #2E2E2E;
+    --orange-color: #D01C28;
+    --white-color: #FFFFFF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.main{
+    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar{
+    width: 1280px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-items{
+    width: 333px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    color: var(--grey-color);
+}
+
+
+a{
+    text-decoration: none;
+    color: var(--grey-color);
+}
+
+.login-btn{
+    width: 75px;
+    height: 31px;
+    color: var(--white-color);
+    background: var(--orange-color);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.login-btn:active{
+    border: 2px solid white;
+}
+
+.logo{
+    width: 76px;
+    height: 42px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: calc(100vh - 72px);
+}
+
+.hero-section{
+    display: flex;
+    justify-content: center;
+    max-width: 1125px;
+    height: 613px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    width: 595px;
+    height: 613px;
+}
+
+h1{
+    font-size: 108px;
+    line-height: 102px;
+}
+
+.shoe-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 613px;
+}
+
+.shoe-image img{
+    width: 530px;
+    height: 487px;
+    margin: auto;
+}
+
+.info > p{
+    font-size: 1rem;
+    max-width: 404px;
+    height: 91px;
+    font-weight: 500;
+    color: var(--grey-color);
+}
+
+.btn{
+    display: flex;
+    justify-content: space-between;
+    width: 331px;
+    height: 41px;
+}
+
+.btn-1{
+    width: 150px;
+    height: 100%;
+    background: var(--orange-color);
+    color: #FFFFFF;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.btn-1:active{
+    border: 1px solid white;
+}
+.btn-2:active{
+    border: 1px solid var(--orange-color);
+}
+.btn-2{
+    width: 141px;
+    height: 100%;
+    outline: none;
+    border: 2px solid #000;
+    background: var(--white-color);
+    color: var(--grey-color);
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.shop{
+    width: 150px;
+    height: 67px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.shop>p{
+    color: var(--grey-color);
+    height: 19px;
+}
+
+.shops{
+    width: 80px;
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+}
