@@ -18,7 +18,6 @@ body{
 }
 
 .main{
-    
     width: 100%;
     height: 100%;
     display: flex;
@@ -44,10 +43,30 @@ body{
     color: var(--grey-color);
 }
 
-
 a{
+    position: relative;
     text-decoration: none;
     color: var(--grey-color);
+}
+
+a::before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 1.3rem;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    background: var(--orange-color);
+}
+
+a:hover::before{
+    transform: scaleX(1);
+    transform-origin: right;
+
 }
 
 .login-btn{
@@ -174,4 +193,24 @@ h1{
     height: 32px;
     display: flex;
     justify-content: space-between;
+}
+
+@media (max-width: 950px){
+    .hero-section{
+        margin-top: 30rem;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+
+    .container{
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .navbar{
+        width: 600px;
+    }
 }
