@@ -1,216 +1,262 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 
-:root{
-    --grey-color: #2E2E2E;
-    --orange-color: #D01C28;
-    --white-color: #FFFFFF;
+:root {
+  --grey-color: #2e2e2e;
+  --orange-color: #d01c28;
+  --white-color: #ffffff;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
 }
-body{
-    width: 100vw;
-    height: 100vh;
+
+html, body {
+  width: 100%;
+  height: 100%;
 }
 
 .main{
     width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 1rem 0;
+    box-shadow: 4px 0 16px rgba(0, 0, 0, 0.2);
+    height: 72px;
 }
 
 .navbar{
-    width: 1280px;
-    height: 72px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 6rem;
+    
 }
 
 .nav-items{
-    width: 333px;
-    height: 24px;
+    width: 50%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    list-style: none;
-    color: var(--grey-color);
 }
 
-a{
-    position: relative;
-    text-decoration: none;
+.nav-items > li > a{
     color: var(--grey-color);
+    position: relative;
 }
 
 a::before{
     content: '';
     display: block;
     position: absolute;
+    top: 20px;
     bottom: 0;
     left: 0;
     right: 0;
-    top: 1.3rem;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
+    border-radius: 1rem;
     background: var(--orange-color);
+    z-index: -1;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 a:hover::before{
     transform: scaleX(1);
     transform-origin: right;
-
 }
 
 .login-btn{
-    width: 75px;
-    height: 31px;
-    color: var(--white-color);
+    width: 6rem;
+    height: 2.5rem;
     background: var(--orange-color);
-    outline: none;
+    color: var(--white-color);
     border: none;
+    outline: none;
     cursor: pointer;
 }
 
-.login-btn:active{
-    border: 2px solid white;
+.login-btn:hover{
+    background: var(--grey-color);
 }
 
-.logo{
-    width: 76px;
-    height: 42px;
+i{
+    display: none;
 }
+
+
+/* hero section */
 
 .container{
+    width: 100%;
+    height: calc(100vh - 72px);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    height: calc(100vh - 72px);
 }
 
 .hero-section{
+    padding: 0 5rem;
     display: flex;
+    align-items: center;
     justify-content: center;
-    max-width: 1125px;
-    height: 613px;
+    width: 90vw;
 }
 
 .info{
     display: flex;
     flex-direction: column;
-    gap: 36px;
+    gap: 32px;
     width: 595px;
+    /* width: 50%; */
     height: 613px;
 }
-
-h1{
-    font-size: 108px;
-    line-height: 102px;
-}
-
-.shoe-image{
+.btn{
+    width: 330px;
+    height: 41px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 613px;
-}
-
-.shoe-image img{
-    width: 530px;
-    height: 487px;
-    margin: auto;
-}
-
-.info > p{
-    font-size: 1rem;
-    max-width: 404px;
-    height: 91px;
-    font-weight: 500;
-    color: var(--grey-color);
-}
-
-.btn{
-    display: flex;
     justify-content: space-between;
-    width: 331px;
-    height: 41px;
+}
+
+.btn button{
+    width: 150px;
+    height: 100%;
+    cursor: pointer;
 }
 
 .btn-1{
-    width: 150px;
-    height: 100%;
+    font-size: 24px;
     background: var(--orange-color);
-    color: #FFFFFF;
-    font-size: 20px;
-    outline: none;
-    border: none;
-    border-radius: 1rem;
+    color: #fff;
     cursor: pointer;
+    border: none;
+    outline: none;
 }
 
-.btn-1:active{
-    border: 1px solid white;
-}
-.btn-2:active{
-    border: 1px solid var(--orange-color);
+.btn-1:hover{
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
 }
 .btn-2{
-    width: 141px;
-    height: 100%;
     outline: none;
-    border: 2px solid #000;
-    background: var(--white-color);
-    color: var(--grey-color);
-    border-radius: 1rem;
-    cursor: pointer;
     font-size: 20px;
+    background: #fff;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    color: #000;
+
+}
+
+.btn-2:hover{
+    background: var(--orange-color);
+    color: #fff;
+}
+
+.shoe-image{
+    width: 595px;
+    height: 613px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shoe-image > img{
+    width: 530px;
+    height: 480px;
+
 }
 
 .shop{
-    width: 150px;
+    width: 10rem;
     height: 67px;
+}
+.shops{
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-
+    align-items: center;
+    width: 6rem;
 }
 
 .shop>p{
-    color: var(--grey-color);
-    height: 19px;
+    margin-bottom: 0.5rem;
+    font-size: 16px;
 }
 
-.shops{
-    width: 80px;
-    height: 32px;
-    display: flex;
-    justify-content: space-between;
+.info > h1{
+    font-size: 5rem;
+    line-height: 102px;
 }
 
-@media (max-width: 950px){
-    .hero-section{
-        margin-top: 30rem;
-        flex-direction: column;
-        align-items: center;
-        height: 100%;
-    }
-
-    .container{
-        flex-direction: column;
-        align-items: center;
-        height: 100vh;
-        width: 100%;
+@media (max-width: 1020px){
+    .nav-items{
+        width: 50%;
     }
 
     .navbar{
-        width: 600px;
+        margin: 0 2rem;
+    }
+}
+
+@media (max-width: 950px){
+    .nav-items{
+        display: none;
+    }
+
+    ul{
+        display: none;
+    }
+    .login-btn{
+        display: none ;
+    }
+
+    i{
+        display: block;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+    .hero-section{
+        /* height: calc(100vh - 72px); */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        padding: 0 1.5rem;
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .info > h1{
+        font-size: 4rem;
+        line-height: 100px;
+    }
+    
+    .info{
+        padding-top: 2rem ;
+        height: 530px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        /* top: 0; */
+        margin-bottom: 5rem;
+
+    }
+
+    .shoe-image{
+        width: 100%;
+        height: 530px;
+    }
+
+    .shoe-image > img{
+        width: 480px;
+        height: 380px;
+    
     }
 }
